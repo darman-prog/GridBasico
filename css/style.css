@@ -1,177 +1,301 @@
 @import url(variables.css);
+
 *{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
+
 body{
-    background: var(--color-primary);   
+    background: var(--color-principal);
 }
+
 .container{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(9,1fr);
     grid-gap: 8px;
     grid-template-areas: 
-    "menu menu menu menu menu menu menu menu menu menu menu menu"
+    "menu menu menu menu menu menu menu derecha derecha derecha derecha derecha"
     "notification notification notification notification sales sales sales sales sales sales balance balance"
     "notification notification notification notification sales sales sales sales sales sales balance balance"
-    "week week week week sales sales sales sales sales sales balance balance "
-    "week week week week sales sales sales sales sales sales devs devs"
-    "week week week week sales sales sales sales sales sales devs devs"
-    "product product product product product timeline timeline timeline timeline timeline timeline timeline"
-    "product product product product product timeline timeline timeline timeline timeline timeline timeline"
-    "product product product product product timeline timeline timeline timeline timeline timeline timeline"
+    "revenue revenue revenue revenue sales sales sales sales sales sales balance balance"
+    "revenue revenue revenue revenue sales sales sales sales sales sales devs devs"
+    "revenue revenue revenue revenue sales sales sales sales sales sales devs devs"
+    "product product product product product test test test test test test test"
+    "product product product product product test test test test test test test"
+    "product product product product product test test test test test test test"
     ;
     width: 800px;
     height: 600px;
     margin: 15px auto;
-    .container{
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(9, 1fr);
-        grid-gap: 8px;
-        grid-template-areas: 
-        "menu menu menu menu menu menu menu menu menu menu menu menu"
-        "notification notification notification notification sales sales sales sales sales sales balance balance"
-        "notification notification notification notification sales sales sales sales sales sales balance balance"
-        "week week week week sales sales sales sales sales sales balance balance "
-        "week week week week sales sales sales sales sales sales devs devs"
-        "week week week week sales sales sales sales sales sales devs devs"
-        "product product product product product timeline timeline timeline timeline timeline timeline timeline"
-        "product product product product product timeline timeline timeline timeline timeline timeline timeline"
-        "product product product product product timeline timeline timeline timeline timeline timeline timeline"
-        ;
-        width: 800px;
-        height: 600px;
-        margin: 15px auto;
-        background: var(--color-primary);
-    
-        
-       
-    }
-    .container div{
-        background: var(--color-secundary);
-        border-radius: 5px;
-    }
-    .item_1{
-        background: red;
-        grid-area: menu;
-    }
-    .item_2{
-        background: blue;
-        grid-area: notification;
-    }
-    .item_3{
-        background: orange;
-        grid-area: sales;
-    }
-    .item_4{
-        background: violet;
-        grid-area: balance;
-    }
-    .item_5{
-        background: salmon;
-        grid-area: week;
-    }
-    .item_6{
-        background: seagreen;
-        grid-area: devs;
-    }
-    .item_7{
-        background: magenta;
-        grid-area: product;
-    }
-    .item_8{
-        background: darkgoldenrod;
-        grid-area: timeline;
-    }
-    @media (width < 600px){
-        .container{
-            width: 100%;
-            margin: 0;
-            height: 100vh;
-            background: red;
-        }
-    }
-}
-.container div{
-    background: var(--color-secundary);
-    border-radius: 5px;
-}
-.item_1{
-    width: 100%;
-    background: red;
-    grid-area: menu;
-}
-.item_1 div{
-    width: 49%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    display: inline-block;
-    background: orange;
-}
-.item_1 div ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.item_1 div ul li{
-    list-style: none;
-}
-.item_1 div ul li a{
-    text-decoration: none;
+    background: var(--color-principal); 
 }
 
-.item_2{
-    background: blue;
+.container div{
+
+    
+    /* background: var(--color-secundary); */
+    border-radius: 5px;
+    
+}
+.item1 div{
+
+    
+    margin-top: 5%;
+    color: var(--letras-p);
+    
+}
+
+.item1 div ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
+
+.item1 div ul li{
+    list-style: none;
+   
+}
+.item1 div ul li a{
+    text-decoration: none;
+}
+.item1{
+   background: var(--color-secundary);
+    grid-area: menu;
+    
+}
+.item__2{
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    background: #87d8f9;
     grid-area: notification;
+   text-transform: capitalize;
+   gap: 1%;
+  
+   
 }
-.item_3{
-    background: orange;
-    grid-area: sales;
+.item__2 p {
+    margin-top: 10%;
+    margin-left: 10%;
+   
+   
 }
-.item_4{
-    background: violet;
+.item__2 h3{
+    margin-left: 10%;
+}
+.item__2 img{
+    position: relative;
+    right: -25px;
+    width: 60px;
+}
+
+.item3{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    grid-area: sales;   
+    padding: 5%;
+    gap: 5px;
+    text-transform: capitalize;
+}
+#color{
+    color: #d7f065;
+}
+
+.item3 img{
+    width: 100%;
+    height:100%;
+    margin-top: 2%;
+    align-content: center;
+}
+.item4{
+   
+    background: var(--color-secundary);
+    grid-area: revenue;
+   
+}
+.item4{
+    flex-direction: column;
+    text-transform: capitalize;
+}
+.item4 p{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.item4 h1{
+    margin-left: 10%;
+    
+}
+.item4 img{
+    margin-bottom: 10px;
+    height: 50%;
+    width: 90%;
+    margin-left: 5%;
+
+}
+
+.item5{
+    background: #fff;
     grid-area: balance;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 8px;
+    
+   
 }
-.item_5{
-    background: salmon;
-    grid-area: week;
+
+.secuno{
+    text-transform: capitalize;
 }
-.item_6{
-    background: seagreen;
+
+.secdos{
+    background: #d7f065;
+    text-transform: capitalize;
+
+}
+
+.ctres{
+    text-transform: capitalize;
+}
+
+
+
+
+.item6{
+    
+    background: #d7f065;
     grid-area: devs;
+    padding: 3%;
 }
-.item_7{
-    background: magenta;
+
+.item6 h3{
+    margin-top: 4%;
+    font-size: 17px;
+    text-transform: capitalize;
+    
+}
+.item6 button{
+    margin-top: 10%;
+    padding: 5%;
+    border-radius: 5px;
+    border: none;
+    font-size: 10px;
+}
+.item6 img{
+    height: 25%;
+    position: relative;
+    top: 4px;
+    right: -5px;
+    width: 30%;
+}
+.item7{
+    display: flex;
+    flex-direction: column;
+    background: var(--color-secundary);
     grid-area: product;
+    justify-content: start;
+
 }
-.item_8{
-    background: darkgoldenrod;
-    grid-area: timeline;
+
+.item7 i{
+    position: absolute;
+    margin-left: 300px;
+    margin-bottom: 140px;
+    z-index: 2;
+   
 }
-@media (width < 800px){
+.item7 img{
+   height: 70px;
+   width: 110px;
+   margin-top: -10px;
+   margin-left: 5%;
+}
+
+.item7 h3{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 60%;
+    text-transform: capitalize;
+}
+ .item7 p{
+    
+    margin-left: 10%;
+    margin-top: 5%;
+ }
+
+ .item7__div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 50%;
+ }
+ .item7__div button {
+    padding: 6px;
+    border-radius: 5%;
+    background:  #aef7ae;
+    border: none;
+    border-radius: 10px;
+    margin-right: -30px;
+ }
+
+ #aa{
+    padding: 6px;
+    border-radius: 15%;
+   background: #d7f065;
+   border: none;
+   margin-right:50%;
+ }
+.item8{
+    display: flex;
+    grid-area: test;
+    align-items: center;
+    justify-content: center;
+   background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1%;
+    
+}
+.item8 img{
+    height: 100%;
+    width: 100%;
+}
+
+    
+
+.item_9{
+    grid-area: derecha;
+    background: linear-gradient(94deg, rgba(135, 216, 249, 1) 0%, rgba(174, 247, 174, 1) 39%, rgba(255, 254, 145, 1) 73%);
+   
+}
+
+@media(width<800px){
     .container{
         width: 100%;
         margin: 0;
-        padding: 2 10px;
-        grid-template-columns: repeat(2, 1fr);
+        padding: 2px 10px;
+        grid-template-columns: 1fr;
         grid-template-areas: 
-        "menu menu"
-        "notification notification"
-        "sales balance"
-        "week week"
-        "devs devs"
-        "product product"
-        "timeline timeline"
-        ;
+    "menu"
+    "notification"
+    "sales"
+    "revenue"
+    "balance"
+    "devs"
+    "product"
+    "test"
+    ;
     }
     .container div{
         border-radius: 0px;
     }
 }
-    
